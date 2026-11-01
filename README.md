@@ -7,7 +7,7 @@
 <br/>
 
 <!-- ANIMATED / DYNAMIC BADGES -->
-[![Latest Release](https://img.shields.io/badge/Release-v1.3.6-7928CA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Riajul18-19/proton-pro/releases)
+[![Latest Release](https://img.shields.io/badge/Release-v1.3.7-7928CA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Riajul18-19/proton-pro/releases)
 [![Build Status](https://img.shields.io/badge/Build-Passing-00E5FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/Riajul18-19/proton-pro/actions)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3%20Ready-00FF88?style=for-the-badge&logo=google-chrome&logoColor=black)](https://developer.chrome.com/docs/extensions/mv3/intro/)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-FF007A?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
@@ -59,7 +59,7 @@ flowchart LR
 ```
 
 ### Option A: From Releases (Recommended)
-1. Download `proton-pro-v1.3.6.zip` from the [**Releases Page**](https://github.com/Riajul18-19/proton-pro/releases).
+1. Download `proton-pro-v1.3.7.zip` from the [**Releases Page**](https://github.com/Riajul18-19/proton-pro/releases).
 2. Extract the archive into a folder on your system.
 3. Open your Chromium browser (Google Chrome, Brave, Microsoft Edge, Vivaldi, Opera).
 4. Navigate to `chrome://extensions` in the address bar.
@@ -126,13 +126,13 @@ To publish a new public release automatically:
 2. Commit and tag:
    ```bash
    git add .
-   git commit -m "chore: release v1.3.6"
-   git tag v1.3.6
+   git commit -m "chore: release v1.3.7"
+   git tag v1.3.7
    git push origin main --tags
    ```
 3. GitHub Actions (`.github/workflows/release.yml`) will automatically:
    - Validate extension structure
-   - Package `proton-pro-v1.3.6.zip`
+   - Package `proton-pro-v1.3.7.zip`
    - Calculate SHA-256 checksums
    - Publish a new public release with download assets!
 
