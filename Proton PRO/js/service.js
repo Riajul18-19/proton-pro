@@ -1,1 +1,1 @@
-!function(){"use strict";importScripts("/js/runtime-fix.js","/js/browser-polyfill.min.js","/js/background.js")}();
+!function () { "use strict"; importScripts("/js/runtime-fix.js", "/js/browser-polyfill.min.js", "/js/background.js") }();
