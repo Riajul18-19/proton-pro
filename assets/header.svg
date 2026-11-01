@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="280">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a051b"/>
+      <stop offset="50%" stop-color="#140d33"/>
+      <stop offset="100%" stop-color="#070214"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6d4aff">
+        <animate attributeName="stop-color" values="#6d4aff; #00f0ff; #aa3bff; #6d4aff" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#00e5ff">
+        <animate attributeName="stop-color" values="#00e5ff; #aa3bff; #6d4aff; #00e5ff" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#aa3bff">
+        <animate attributeName="stop-color" values="#aa3bff; #6d4aff; #00f0ff; #aa3bff" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d4aff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6d4aff" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <radialGradient id="glowPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6d4aff" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#00e5ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a051b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters for Glow Effect -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .cyber-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: 5px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: 3px;
+        fill: #8f9bc7;
+        font-weight: 500;
+      }
+      .badge-text {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+      }
+
+      /* Animations */
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes floatAnim {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes pulseRing {
+        0% { r: 52px; opacity: 0.8; stroke-width: 2px; }
+        50% { r: 68px; opacity: 0.2; stroke-width: 1px; }
+        100% { r: 52px; opacity: 0.8; stroke-width: 2px; }
+      }
+      @keyframes blinkBeacon {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #00ff88); }
+        50% { opacity: 0.3; filter: none; }
+      }
+      @keyframes gridSlide {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(20px); }
+      }
+
+      .floating-logo {
+        animation: floatAnim 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .pulsing-ring {
+        animation: pulseRing 3s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .beacon {
+        animation: blinkBeacon 1.6s ease-in-out infinite;
+      }
+      .radar-line {
+        animation: radarSweep 6s linear infinite;
+        transform-origin: 145px 140px;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="916" height="276" rx="20" fill="url(#bgGradient)" stroke="url(#borderGrad)" stroke-width="2"/>
+
+  <!-- Cyber Grid Background Pattern -->
+  <g opacity="0.12">
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#6d4aff" stroke-width="0.8"/>
+    </pattern>
+    <rect x="4" y="4" width="912" height="272" rx="18" fill="url(#grid)" />
+  </g>
+
+  <!-- Background Ambient Glow -->
+  <circle cx="145" cy="140" r="140" fill="url(#glowPulse)"/>
+  <circle cx="750" cy="140" r="130" fill="url(#glowPulse)" opacity="0.6"/>
+
+  <!-- Shield & Proton Logo Graphics on Left -->
+  <g class="floating-logo">
+    <!-- Pulse Rings -->
+    <circle cx="145" cy="140" r="60" fill="none" stroke="#00e5ff" stroke-opacity="0.3" class="pulsing-ring"/>
+    <circle cx="145" cy="140" r="48" fill="#140d33" stroke="#6d4aff" stroke-width="2.5" filter="url(#softGlow)"/>
+
+    <!-- Orbital Rotation Line -->
+    <circle cx="145" cy="140" r="38" fill="none" stroke="#6d4aff" stroke-dasharray="4,6" opacity="0.7"/>
+    <line x1="145" y1="140" x2="183" y2="140" stroke="#00e5ff" stroke-width="1.8" class="radar-line" stroke-linecap="round"/>
+
+    <!-- Shield Path -->
+    <path d="M 145 116 L 166 126 C 166 148 156 160 145 166 C 134 160 124 148 124 126 Z" 
+          fill="url(#accentGrad)" 
+          filter="url(#neonGlow)" />
+    <!-- Proton P-Lock Inner Symbol -->
+    <path d="M 141 132 L 149 132 C 152 132 154 134 154 137 C 154 140 152 142 149 142 L 145 142 L 145 150 L 141 150 Z" 
+          fill="#ffffff" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(240, 95)">
+    <!-- Main Title -->
+    <text x="0" y="24" class="cyber-text" font-size="44" fill="url(#accentGrad)" filter="url(#softGlow)">
+      PROTON PRO
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="2" y="58" class="sub-text">
+      NEXT-GEN ENCRYPTED BROWSER VPN &amp; PRIVACY SUITE
+    </text>
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 80)">
+      <!-- Badge 1: Version -->
+      <g>
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#1a1338" stroke="#6d4aff" stroke-width="1.2"/>
+        <text x="12" y="17" class="badge-text" fill="#a488ff">v1.3.6 PRO</text>
+      </g>
+
+      <!-- Badge 2: Status Live -->
+      <g transform="translate(115, 0)">
+        <rect x="0" y="0" width="138" height="26" rx="6" fill="#12252a" stroke="#00e5ff" stroke-width="1.2"/>
+        <circle cx="16" cy="13" r="4.5" fill="#00ff88" class="beacon"/>
+        <text x="27" y="17" class="badge-text" fill="#00ffc8">ARMORED CORE</text>
+      </g>
+
+      <!-- Badge 3: Encryption -->
+      <g transform="translate(263, 0)">
+        <rect x="0" y="0" width="142" height="26" rx="6" fill="#1c1236" stroke="#aa3bff" stroke-width="1.2"/>
+        <text x="12" y="17" class="badge-text" fill="#d19fff">AES-256 ENCRYPT</text>
+      </g>
+
+      <!-- Badge 4: Manifest V3 -->
+      <g transform="translate(415, 0)">
+        <rect x="0" y="0" width="112" height="26" rx="6" fill="#1a1338" stroke="#48348a" stroke-width="1.2"/>
+        <text x="12" y="17" class="badge-text" fill="#8f9bc7">MV3 READY</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side Cyber Graphic / Signal Graph -->
+  <g transform="translate(755, 65)">
+    <!-- Decorative Box -->
+    <rect x="0" y="0" width="130" height="150" rx="12" fill="#120c2b" stroke="#37266b" stroke-width="1.2"/>
+    <text x="14" y="24" font-family="monospace" font-size="10" fill="#6d4aff" letter-spacing="1">STATUS: OK</text>
+    
+    <!-- Mini Signal Bars -->
+    <g transform="translate(14, 40)">
+      <rect x="0" y="30" width="6" height="20" rx="2" fill="#00e5ff" opacity="0.6"/>
+      <rect x="12" y="22" width="6" height="28" rx="2" fill="#00e5ff" opacity="0.8"/>
+      <rect x="24" y="14" width="6" height="36" rx="2" fill="#00e5ff"/>
+      <rect x="36" y="5" width="6" height="45" rx="2" fill="#00ff88"/>
+      <rect x="48" y="10" width="6" height="40" rx="2" fill="#00e5ff"/>
+      <rect x="60" y="20" width="6" height="30" rx="2" fill="#6d4aff"/>
+      <rect x="72" y="8" width="6" height="42" rx="2" fill="#00ff88"/>
+      <rect x="84" y="2" width="6" height="48" rx="2" fill="#00e5ff"/>
+    </g>
+
+    <text x="14" y="112" font-family="monospace" font-size="9" fill="#8f9bc7">SPEED: 10 Gbps</text>
+    <text x="14" y="130" font-family="monospace" font-size="9" fill="#00ff88">LOGS: ZERO (0)</text>
+  </g>
+</svg>
+

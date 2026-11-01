@@ -1,0 +1,34 @@
+{
+  "name": "proton-pro",
+  "version": "1.3.6",
+  "description": "Proton PRO - Next-Gen Encrypted Browser VPN & Privacy Extension",
+  "main": "Proton PRO/js/background.js",
+  "scripts": {
+    "test": "node scripts/validate-manifest.js",
+    "package": "powershell -ExecutionPolicy Bypass -File scripts/build-release.ps1",
+    "build": "powershell -ExecutionPolicy Bypass -File scripts/build-release.ps1",
+    "release": "powershell -ExecutionPolicy Bypass -File scripts/build-release.ps1 && node scripts/create-release-notes.js"
+  },
+  "keywords": [
+    "vpn",
+    "privacy",
+    "security",
+    "encryption",
+    "chrome-extension",
+    "manifest-v3",
+    "proton",
+    "webrtc-shield",
+    "proxy"
+  ],
+  "author": "Riajul",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Riajul18-19/proton-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Riajul18-19/proton-pro/issues"
+  },
+  "homepage": "https://github.com/Riajul18-19/proton-pro#readme"
+}
+

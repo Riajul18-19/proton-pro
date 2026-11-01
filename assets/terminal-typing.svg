@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="220">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f0926" />
+      <stop offset="100%" stop-color="#070313" />
+    </linearGradient>
+    <linearGradient id="termBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d4aff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6d4aff" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <style>
+      .code-font {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+      }
+      .cursor {
+        animation: blink 0.9s infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Staggered Line Reveals */
+      @keyframes reveal1 { 0%, 5% { opacity: 0; } 10%, 100% { opacity: 1; } }
+      @keyframes reveal2 { 0%, 25% { opacity: 0; } 30%, 100% { opacity: 1; } }
+      @keyframes reveal3 { 0%, 50% { opacity: 0; } 55%, 100% { opacity: 1; } }
+      @keyframes reveal4 { 0%, 75% { opacity: 0; } 80%, 100% { opacity: 1; } }
+
+      .line-1 { animation: reveal1 8s infinite; }
+      .line-2 { animation: reveal2 8s infinite; }
+      .line-3 { animation: reveal3 8s infinite; }
+      .line-4 { animation: reveal4 8s infinite; }
+    </style>
+  </defs>
+
+  <!-- Window Container -->
+  <rect x="2" y="2" width="916" height="216" rx="14" fill="url(#termBg)" stroke="url(#termBorder)" stroke-width="1.5"/>
+
+  <!-- Window Header Bar -->
+  <path d="M 2 16 Q 2 2 16 2 L 904 2 Q 918 2 918 16 L 918 36 L 2 36 Z" fill="#181136"/>
+  <line x1="2" y1="36" x2="918" y2="36" stroke="#2c1d5c" stroke-width="1"/>
+
+  <!-- Window Control Dots -->
+  <circle cx="24" cy="19" r="5.5" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="5.5" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="5.5" fill="#27c93f"/>
+
+  <!-- Window Title -->
+  <text x="460" y="23" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8f9bc7" letter-spacing="1.5">
+    PROTON PRO SECURE TUNNEL DAEMON • ACTIVE
+  </text>
+
+  <!-- Console Log Lines -->
+  <!-- Line 1 -->
+  <g class="line-1" transform="translate(26, 68)">
+    <text class="code-font" fill="#6d4aff">&gt;</text>
+    <text x="18" class="code-font" fill="#e0e0e0">proton-pro init --secure-core --stealth --dns-leak-protect</text>
+  </g>
+
+  <!-- Line 2 -->
+  <g class="line-2" transform="translate(26, 98)">
+    <text class="code-font" fill="#00e5ff">[SYS]</text>
+    <text x="50" class="code-font" fill="#a0aec0">Establishing WireGuard / OpenVPN ChaCha20 + AES-256 tunnel...</text>
+    <text x="640" class="code-font" fill="#00ff88">[CONNECTED]</text>
+  </g>
+
+  <!-- Line 3 -->
+  <g class="line-3" transform="translate(26, 128)">
+    <text class="code-font" fill="#00e5ff">[SEC]</text>
+    <text x="50" class="code-font" fill="#a0aec0">IPv6 Leak Shield: ENGAGED | WebRTC Protection: LOCKED | Swiss Privacy: ENFORCED</text>
+  </g>
+
+  <!-- Line 4 -->
+  <g class="line-4" transform="translate(26, 158)">
+    <text class="code-font" fill="#aa3bff">[NET]</text>
+    <text x="50" class="code-font" fill="#ffffff">Routing verified through Swiss Data Center. Real IP: </text>
+    <text x="440" class="code-font" fill="#ff5f56" text-decoration="line-through">HIDDEN</text>
+    <text x="510" class="code-font" fill="#00ff88">&gt;&gt; PROTON SECURE NODE (10 Gbps)</text>
+  </g>
+
+  <!-- Prompt & Blinking Cursor -->
+  <g transform="translate(26, 188)">
+    <text class="code-font" fill="#6d4aff">&gt;</text>
+    <text x="18" class="code-font" fill="#8f9bc7">Status: Ready for high-speed private browsing</text>
+    <rect x="365" y="-12" width="8" height="15" fill="#00e5ff" class="cursor"/>
+  </g>
+</svg>
+

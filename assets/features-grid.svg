@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 180" width="100%" height="180">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#150e33" />
+      <stop offset="100%" stop-color="#0a051d" />
+    </linearGradient>
+
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#6d4aff"/>
+    </linearGradient>
+
+    <style>
+      .card-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .card-desc {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 11.5px;
+        fill: #9fa9ca;
+        line-height: 1.4;
+      }
+      .tag {
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      @keyframes floatCard1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      @keyframes floatCard2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      @keyframes floatCard3 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      @keyframes floatCard4 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+      .card-1 { animation: floatCard1 4s ease-in-out infinite; }
+      .card-2 { animation: floatCard2 4.5s ease-in-out infinite 0.5s; }
+      .card-3 { animation: floatCard3 4.2s ease-in-out infinite 1s; }
+      .card-4 { animation: floatCard4 4.8s ease-in-out infinite 1.5s; }
+    </style>
+  </defs>
+
+  <!-- Card 1: Military Encryption -->
+  <g class="card-1" transform="translate(10, 10)">
+    <rect x="0" y="0" width="210" height="155" rx="12" fill="url(#cardGrad)" stroke="#6d4aff" stroke-width="1.2"/>
+    <circle cx="36" cy="38" r="18" fill="#201548"/>
+    <!-- Lock Icon -->
+    <path d="M 31 38 L 41 38 C 42 38 43 39 43 40 L 43 46 C 43 47 42 48 41 48 L 31 48 C 30 48 29 47 29 46 L 29 40 C 29 39 30 38 31 38 Z" fill="#aa3bff"/>
+    <path d="M 33 38 L 33 34 C 33 31.5 34.5 30 36 30 C 37.5 30 39 31.5 39 34 L 39 38" fill="none" stroke="#00e5ff" stroke-width="2"/>
+    <text x="36" y="76" class="card-title">AES-256 GCM</text>
+    <text x="36" y="98" class="card-desc">CERN-tested encryption</text>
+    <text x="36" y="114" class="card-desc">with Perfect Secrecy</text>
+    <rect x="36" y="126" width="76" height="18" rx="4" fill="#1e1442"/>
+    <text x="44" y="139" class="tag" fill="#00e5ff">MIL-GRADE</text>
+  </g>
+
+  <!-- Card 2: 10Gbps Speed -->
+  <g class="card-2" transform="translate(235, 10)">
+    <rect x="0" y="0" width="210" height="155" rx="12" fill="url(#cardGrad)" stroke="#00e5ff" stroke-width="1.2"/>
+    <circle cx="36" cy="38" r="18" fill="#102b3a"/>
+    <!-- Lightning Icon -->
+    <polygon points="37,27 30,39 36,39 35,49 43,36 38,36" fill="#00ffc8"/>
+    <text x="36" y="76" class="card-title">10 Gbps Turbo</text>
+    <text x="36" y="98" class="card-desc">High-speed accelerator</text>
+    <text x="36" y="114" class="card-desc">no bandwidth throttle</text>
+    <rect x="36" y="126" width="82" height="18" rx="4" fill="#0c2e36"/>
+    <text x="44" y="139" class="tag" fill="#00ff88">UNLIMITED</text>
+  </g>
+
+  <!-- Card 3: Leak Protection -->
+  <g class="card-3" transform="translate(460, 10)">
+    <rect x="0" y="0" width="210" height="155" rx="12" fill="url(#cardGrad)" stroke="#6d4aff" stroke-width="1.2"/>
+    <circle cx="36" cy="38" r="18" fill="#201548"/>
+    <!-- Web Shield Icon -->
+    <path d="M 36 29 L 45 33 C 45 42 41 47 36 49 C 31 47 27 42 27 33 Z" fill="none" stroke="#6d4aff" stroke-width="2"/>
+    <polyline points="32,39 35,42 41,35" fill="none" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
+    <text x="36" y="76" class="card-title">Leak Shield</text>
+    <text x="36" y="98" class="card-desc">WebRTC &amp; IPv6 barrier</text>
+    <text x="36" y="114" class="card-desc">built into browser core</text>
+    <rect x="36" y="126" width="88" height="18" rx="4" fill="#231745"/>
+    <text x="44" y="139" class="tag" fill="#aa3bff">ZERO LEAKS</text>
+  </g>
+
+  <!-- Card 4: Swiss Jurisdiction -->
+  <g class="card-4" transform="translate(685, 10)">
+    <rect x="0" y="0" width="210" height="155" rx="12" fill="url(#cardGrad)" stroke="#aa3bff" stroke-width="1.2"/>
+    <circle cx="36" cy="38" r="18" fill="#27133b"/>
+    <!-- Globe/Flag Icon -->
+    <circle cx="36" cy="38" r="10" fill="none" stroke="#ff4d88" stroke-width="2"/>
+    <line x1="26" y1="38" x2="46" y2="38" stroke="#ff4d88" stroke-width="1.5"/>
+    <ellipse cx="36" cy="38" rx="5" ry="10" fill="none" stroke="#ff4d88" stroke-width="1.5"/>
+    <text x="36" y="76" class="card-title">Swiss Privacy</text>
+    <text x="36" y="98" class="card-desc">Protected under strict</text>
+    <text x="36" y="114" class="card-desc">Swiss data privacy laws</text>
+    <rect x="36" y="126" width="86" height="18" rx="4" fill="#32163b"/>
+    <text x="44" y="139" class="tag" fill="#ff4d88">100% NO LOGS</text>
+  </g>
+</svg>
+
